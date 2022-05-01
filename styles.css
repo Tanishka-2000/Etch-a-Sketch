@@ -2,11 +2,20 @@ body{
     margin: 0;
     background-color: #C7CFB7;
 }
+:root{
+    --grid-size: var(16);
+}
 .container{
     height: 960px;
     width: 960px;
     background-color: #9DAD7F;
     margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
+.container div{
+    border: 1px solid #fff;
 }
 .gridChanger{
     position: absolute;
