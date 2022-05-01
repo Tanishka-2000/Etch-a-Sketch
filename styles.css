@@ -1,22 +1,30 @@
 body{
     margin: 0;
     background-color: #C7CFB7;
+    text-align: center;
 }
+.heading{
+    color:#557174;
+    margin: 0 auto;
+}
+
+/* using display grid to place all divs */
 .container{
     height: 960px;
     width: 960px;
     background-color: #9DAD7F;
-    margin: 20px auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
 }
-.container div:hover{
-    background-color: #557174;
-}
+
+/* class to be added on hover */
 .etched{
     background-color: #557174;
 }
+
+/* button */
 .gridChanger{
     position: absolute;
     top: 10px;
