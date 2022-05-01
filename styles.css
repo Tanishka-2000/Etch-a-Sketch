@@ -14,8 +14,11 @@ body{
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
 }
-.container div{
-    border: 1px solid #fff;
+.container div:hover{
+    background-color: #557174;
+}
+.etched{
+    background-color: #557174;
 }
 .gridChanger{
     position: absolute;
