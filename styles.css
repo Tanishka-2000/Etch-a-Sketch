@@ -2,9 +2,6 @@ body{
     margin: 0;
     background-color: #C7CFB7;
 }
-:root{
-    --grid-size: var(16);
-}
 .container{
     height: 960px;
     width: 960px;
