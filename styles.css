@@ -22,7 +22,6 @@ body{
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
 }
-
 /* button */
 button{
     width: 300px;
@@ -34,6 +33,10 @@ button{
     border-radius: 5%;
     padding: 10px 20px;
     margin: 20px 0px;
+    transition: transform 100ms ease;
+}
+.animate{
+    transform: scale(1.1);
 }
 .gridChanger{
     background-color: #FBDF07;

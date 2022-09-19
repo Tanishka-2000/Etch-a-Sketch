@@ -4,8 +4,19 @@ let gridChanger = document.querySelector(".gridChanger");
 let eraser = document.querySelector(".eraser");
 let clear = document.querySelector(".clear");
 let colorPicker = document.querySelector("input[type='color']");
+let btns = document.querySelectorAll('button');
 let etch = false;
 let color  = '#000';
+
+//add animation to button click
+btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.target.classList.add('animate');
+        setTimeout(()=>{
+            e.target.classList.remove('animate');
+        },100);
+    });
+});
 
 // add divs to container dynamically and change their bgcolor on hover
 function makeGrid(){
