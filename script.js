@@ -1,37 +1,39 @@
 let gridSize = 16;
 let container = document.querySelector(".container");
-let button = document.querySelector(".gridChanger");
+let gridChanger = document.querySelector(".gridChanger");
+let eraser = document.querySelector(".eraser");
+let clear = document.querySelector(".clear");
+let colorPicker = document.querySelector("input[type='color']");
 let etch = false;
+let color  = '#557174';
 
 // add divs to container dynamically and change their bgcolor on hover
 function makeGrid(){
     container.innerHTML = "";
     for (let i = 0; i < (gridSize*gridSize); i++) {
         let div = document.createElement("div");
-        div.addEventListener("mouseenter",etched);
-        div.addEventListener("mousedown",startEtch);
-        div.addEventListener("mouseup",stopEtch);
+        div.addEventListener("mouseenter", etched);
+        div.addEventListener("mousedown", startEtch);
+        div.addEventListener("mouseup", stopEtch);
         container.appendChild(div);
     }
-    // let divs = document.querySelectorAll(".container div");
-    // divs.forEach((div) => {
-    //     div.addEventListener("mouseenter",etched);
-    // });
 }
-// container.addEventListener('dblClick',function(){
-//     console.log('double clicked');
-//     classToAdd = classToAdd === 'etched' ? 'etched' : '';
-// });
-//function to change bgcolor by adding class
 
 const startEtch = () => etch = true;
 
 const stopEtch = () => etch = false;
 
 function etched(e){
-    e.target.className = etch ? 'etched' : '';
+    if(etch) e.target.style.backgroundColor = color;
 }
-button.addEventListener("click",changeGridsize);
+gridChanger.addEventListener("click",changeGridsize);
+// eraser.addEventListener('click', function(){
+//
+// });
+colorPicker.addEventListener('input',function(e){
+    console.log(e.target.value);
+    color = e.target.value;
+})
 
 //function to change grid size based on user input
 function changeGridsize(){

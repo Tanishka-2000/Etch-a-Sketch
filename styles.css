@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-color: #C7CFB7;
     text-align: center;
+    /* --etch-color: #557174 */
 }
 .heading{
     color:#557174;
@@ -20,19 +21,27 @@ body{
 }
 
 /* class to be added on hover */
-.etched{
-    background-color: #557174;
-}
+/* .etched{
+    background-color: var(--etch-color);
+} */
 
 /* button */
-.gridChanger{
-    position: absolute;
+button{
+    /* position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px; */
+    width: 300px;
+    display: block;
     background-color: #9DAD7F;
     color: #557174;
     font-size: 2rem;
     border: none;
     border-radius: 5%;
-    padding: 1% 2%;
+    padding: 10px 20px;
+    margin: 20px 0px;
+}
+.control-group{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
