@@ -5,7 +5,7 @@ let eraser = document.querySelector(".eraser");
 let clear = document.querySelector(".clear");
 let colorPicker = document.querySelector("input[type='color']");
 let etch = false;
-let color  = '#557174';
+let color  = '#000';
 
 // add divs to container dynamically and change their bgcolor on hover
 function makeGrid(){
@@ -20,20 +20,21 @@ function makeGrid(){
 }
 
 const startEtch = () => etch = true;
-
 const stopEtch = () => etch = false;
 
 function etched(e){
     if(etch) e.target.style.backgroundColor = color;
 }
+
 gridChanger.addEventListener("click",changeGridsize);
-// eraser.addEventListener('click', function(){
-//
-// });
-colorPicker.addEventListener('input',function(e){
-    console.log(e.target.value);
-    color = e.target.value;
-})
+eraser.addEventListener('click', () => color = "#fff");
+colorPicker.addEventListener('input',(e) => color = e.target.value);
+clear.addEventListener('click', () => {
+    document.querySelectorAll('.container div').forEach(div => {
+        div.style.backgroundColor = "#fff";
+    });
+
+});
 
 //function to change grid size based on user input
 function changeGridsize(){

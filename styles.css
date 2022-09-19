@@ -1,44 +1,48 @@
 body{
     margin: 0;
-    background-color: #C7CFB7;
+    /* background-color: #C7CFB7; */
+    background-image: url('drawing.jpg');
+    background-size: cover;
     text-align: center;
     /* --etch-color: #557174 */
 }
 .heading{
-    color:#557174;
-    margin: 0 auto;
+    font-size: 48px;
+    color:#000;
+    margin: 20px auto;
 }
 
 /* using display grid to place all divs */
 .container{
     height: 960px;
     width: 960px;
-    background-color: #9DAD7F;
-    margin: 0 auto;
+    background-color: #fff;
+    margin: 20px 0 0 600px;
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
 }
 
-/* class to be added on hover */
-/* .etched{
-    background-color: var(--etch-color);
-} */
-
 /* button */
 button{
-    /* position: absolute;
-    top: 10px;
-    right: 10px; */
     width: 300px;
     display: block;
     background-color: #9DAD7F;
-    color: #557174;
+    color: #000;
     font-size: 2rem;
     border: none;
     border-radius: 5%;
     padding: 10px 20px;
     margin: 20px 0px;
+}
+.gridChanger{
+    background-color: #FBDF07;
+}
+.eraser{
+    background-color: #367E18;
+}
+.clear{
+    background-color: #FF7F3F;
 }
 .control-group{
     position: absolute;
