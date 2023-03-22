@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
     margin: 0;
-    /* background-color: #C7CFB7; */
     background-image: url('drawing.jpg');
     background-size: cover;
     text-align: center;
-    /* --etch-color: #557174 */
+    font-family: 'Roboto', sans-serif;
 }
 .heading{
     font-size: 48px;
@@ -14,41 +15,56 @@ body{
 
 /* using display grid to place all divs */
 .container{
-    height: 960px;
-    width: 960px;
+    height: 900px;
+    width: 900px;
     background-color: #fff;
-    margin: 20px 0 0 600px;
+    margin: 5px 0 0 520px;
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
 }
-/* button */
+
+
 button{
-    width: 300px;
+    width: 250px;
     display: block;
-    background-color: #9DAD7F;
-    color: #000;
     font-size: 2rem;
     border: none;
     border-radius: 5%;
     padding: 10px 20px;
-    margin: 20px 0px;
+    margin: 20px auto;
     transition: transform 100ms ease;
 }
+
 .animate{
     transform: scale(1.1);
 }
+
 .gridChanger{
     background-color: #FBDF07;
 }
+
 .eraser{
     background-color: #367E18;
 }
+
 .clear{
     background-color: #FF7F3F;
 }
+
 .control-group{
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 300px;
+}
+
+.control-group .rules{
+    font-size: 1.2rem;
+}
+
+.control-group .rules p{
+    border: 1px solid #999;
+    margin: 15px;
+    padding: 5px;
 }
